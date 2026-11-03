@@ -329,6 +329,87 @@
       margin-bottom: 1.5rem;
     }
 
+    /* ── CHALLENGE ── */
+    #challenge {
+      background: var(--navy-mid);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .challenge-lead {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+    .challenge-list { list-style: none; }
+    .challenge-list li {
+      position: relative;
+      padding: 1.1rem 0 1.1rem 2.25rem;
+      border-bottom: 1px solid rgba(201,168,76,0.18);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #e4e8f0;
+    }
+    .challenge-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 1.75rem;
+      width: 14px; height: 2px;
+      background: var(--gold);
+    }
+    .challenge-close {
+      margin-top: 2rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--gold);
+    }
+
+    /* ── PLAN ── */
+    #plan { background: var(--navy); text-align: center; }
+    #plan .section-label { justify-content: center; }
+    .plan-intro {
+      color: var(--text-light);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .plan-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+      counter-reset: step;
+      text-align: left;
+    }
+    .plan-step {
+      border-top: 2px solid var(--gold);
+      padding-top: 1.75rem;
+    }
+    .plan-step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .plan-step-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .plan-step p { color: #c8cdd8; line-height: 1.75; }
+    .plan-cta { margin-top: 3.5rem; }
+
     /* ── ABOUT ── */
     #about {
       background: transparent;
@@ -771,6 +852,8 @@
       section { padding: 4rem 2rem; }
       #about, #contact { grid-template-columns: 1fr; gap: 3rem; }
       #philosophy { grid-template-columns: 1fr; gap: 2rem; }
+      #challenge { grid-template-columns: 1fr; gap: 2rem; }
+      .plan-steps { grid-template-columns: 1fr; }
       .philosophy-quote { position: static; }
       .programs-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
@@ -808,9 +891,9 @@
 
   <div class="hero-content">
     <h1 class="hero-name">Jeff <em>Roth</em></h1>
-    <div class="hero-title">Performance Coaching for Emerging Athletic Directors &amp; High School Coaches</div>
+    <div class="hero-title">Even Great Leaders Need a Coach</div>
     <p class="hero-tagline">
-      Twenty years of school administrative experience and dedicated to developing the next generation of leaders.
+      I help emerging athletic directors and high school coaches grow their programs — and themselves — drawing on twenty years of leading in school athletics.
     </p>
     <div class="hero-buttons">
     <a href="#contact" class="hero-cta">Start the Conversation</a>
@@ -827,11 +910,29 @@
   </div>
 </section>
 
+<!-- CHALLENGE -->
+<section id="challenge">
+  <div>
+    <div class="section-label">The Challenge</div>
+    <h2 class="section-title">Leading in High School Athletics Is Hard. Doing It Alone Is Harder.</h2>
+    <p class="challenge-lead">The job comes with big expectations and very little preparation. Most new athletic directors and coaches figure it out on the fly.</p>
+  </div>
+  <div>
+    <ul class="challenge-list">
+      <li>Pressure from every direction: administrators, parents, boosters, and athletes</li>
+      <li>Nobody in your building who really understands your job</li>
+      <li>Learning the role without a playbook or a trusted sounding board</li>
+      <li>Long seasons, late nights, and too little time to lead instead of react</li>
+    </ul>
+    <p class="challenge-close">You don't have to figure it out alone.</p>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about">
   <div>
     <div class="section-label">About Jeffrey</div>
-    <h2 class="section-title">Built from the Inside Out</h2>
+    <h2 class="section-title">An Athletic Director Who Coaches Athletic Directors</h2>
     <div class="about-text">
       <p>
         Jeff Roth knows what it takes to lead a high school athletic program — not from a distance, but from experience. As a former Division I athlete, high school coach, and current athletic director with over 20 years in the field, Jeff has lived every stage of the journey he now helps others navigate.
@@ -867,6 +968,33 @@
       <div class="credential-card-value">Director of Athletics<br>High School Assistant Principal<br>District Phys Ed &amp; Health Coordinator<br>District Public Relations Director<br>District BEDS Coordinator<br>District VADIR Coordinator<br>Homecoming Coordinator<br>League Executive Secretary<br>League Treasurer<br>District Administrators Union President<br>Section VI Boys Rep<br>Section VI Executive Committee Member<br>NYSPHSAA Central Committee Voting Member<br>NYSAAA Chapter Representative</div>
     </div>
 
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">A Simple Path to Get Started</h2>
+  <p class="plan-intro">Three steps from first conversation to real progress.</p>
+  <div class="plan-steps">
+    <div class="plan-step">
+      <div class="plan-step-num">01</div>
+      <div class="plan-step-title">Free Discovery Call</div>
+      <p>A 30-minute conversation about where you are, where you want to go, and whether we're a good fit. No pressure and no pitch.</p>
+    </div>
+    <div class="plan-step">
+      <div class="plan-step-num">02</div>
+      <div class="plan-step-title">Roadmap Session</div>
+      <p>We map out your goals, your challenges, and a personalized plan built around your program and your season.</p>
+    </div>
+    <div class="plan-step">
+      <div class="plan-step-num">03</div>
+      <div class="plan-step-title">Ongoing Coaching</div>
+      <p>Weekly or biweekly sessions with clear next steps after every meeting, plus regular check-ins on your progress.</p>
+    </div>
+  </div>
+  <div class="plan-cta">
+    <a href="https://cal.com/jeffroth/free-discovery-call" target="_blank" class="hero-cta">Book Your Free Call</a>
   </div>
 </section>
 
@@ -977,7 +1105,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS (hidden until real testimonials are ready)
 <section id="testimonials">
   <div class="section-label" style="justify-content:center;">Testimonials</div>
   <h2 class="section-title">What Clients Say</h2>
@@ -1000,6 +1128,8 @@
     </div>
   </div>
 </section>
+
+-->
 
 <!-- CONTACT -->
 <section id="contact">
