@@ -190,6 +190,17 @@
       transition: background 0.2s, transform 0.2s;
     }
 
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .hero-buttons a { text-align: center; }
+
+    .hero-cta-secondary:hover { background: rgba(201,168,76,0.1); }
+
     .hero-cta:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
@@ -744,6 +755,7 @@
     .hero-name     { animation: fadeUp 0.6s ease both; animation-delay: 0.25s; }
     .hero-title    { animation: fadeUp 0.6s ease both; animation-delay: 0.35s; }
     .hero-tagline  { animation: fadeUp 0.6s ease both; animation-delay: 0.45s; }
+    .hero-buttons  { animation: fadeUp 0.6s ease both; animation-delay: 0.55s; }
     .hero-cta      { animation: fadeUp 0.6s ease both; animation-delay: 0.55s; }
     .hero-visual   { animation: fadeUp 0.8s ease both; animation-delay: 0.4s; }
 
@@ -764,6 +776,12 @@
       .credentials-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 1rem; padding: 2rem; text-align: center; }
     }
+    @media (max-width: 700px) {
+      .nav-links li:not(.nav-book) { display: none; }
+      .nav-logo-img { height: 56px; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons a { width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -778,7 +796,7 @@
     <li><a href="#programs">Programs</a></li>
     <li><a href="#philosophy">Approach</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://cal.com/jeffroth/free-discovery-call" target="_blank" style="color:var(--gold);border:1px solid var(--gold);padding:0.4rem 1rem;">Book a Call</a></li>
+    <li class="nav-book"><a href="https://cal.com/jeffroth/free-discovery-call" target="_blank" style="color:var(--gold);border:1px solid var(--gold);padding:0.4rem 1rem;">Book a Call</a></li>
   </ul>
 </nav>
 
@@ -793,8 +811,10 @@
     <p class="hero-tagline">
       Twenty years of school administrative experience and dedicated to developing the next generation of leaders.
     </p>
+    <div class="hero-buttons">
     <a href="#contact" class="hero-cta">Start the Conversation</a>
-    <a href="https://cal.com/jeffroth/free-discovery-call" target="_blank" style="display:inline-block;margin-left:1rem;border:1px solid rgba(201,168,76,0.6);color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;transition:background 0.2s;">Book a Free Call</a>
+    <a href="https://cal.com/jeffroth/free-discovery-call" target="_blank" class="hero-cta-secondary" style="display:inline-block;border:1px solid rgba(201,168,76,0.6);color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;transition:background 0.2s;">Book a Free Call</a>
+    </div>
   </div>
 
   <div class="hero-visual">
