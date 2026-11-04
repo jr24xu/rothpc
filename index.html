@@ -688,6 +688,36 @@
       border: 1px dashed rgba(201,168,76,0.3);
     }
 
+    .featured-testimonial {
+      max-width: 820px;
+      margin: 2.5rem auto 0;
+      background: var(--navy);
+      padding: 3rem 3.5rem;
+      text-align: left;
+      border-top: 4px solid var(--navy-mid);
+    }
+    .featured-testimonial .stars { color: var(--gold); font-size: 1.4rem; letter-spacing: 0.2em; margin-bottom: 1rem; }
+    .featured-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .featured-testimonial blockquote p { color: #e4e8f0; font-size: 1rem; line-height: 1.85; }
+    .featured-testimonial blockquote p + p { margin-top: 1rem; }
+    .featured-testimonial figcaption {
+      margin-top: 2rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    @media (max-width: 700px) { .featured-testimonial { padding: 2rem 1.5rem; } }
+
     /* ── CONTACT ── */
     #contact {
       background: var(--navy-mid);
@@ -876,7 +906,7 @@
     <img src="logo.png" alt="Roth Performance Coaching" class="nav-logo-img">
   </div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="#programs">Programs</a></li>
     <li><a href="#philosophy">Approach</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -944,6 +974,8 @@
         Jeff founded <strong>Roth Performance Coaching</strong> to give athletic directors and coaches the resource he wished he'd had — a trusted partner who understands the unique pressures, politics, and passion of high school athletics.
       </p>
     </div>
+    <a href="about.html" class="program-cta" style="margin-top:2rem;display:inline-block;">Read My Full Story</a>
+  
   </div>
 
   <div>
@@ -1105,31 +1137,22 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS (hidden until real testimonials are ready)
+<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-label" style="justify-content:center;">Testimonials</div>
   <h2 class="section-title">What Clients Say</h2>
 
-  <div class="testimonials-grid">
-    <div class="testimonial-card testimonial-placeholder">
-      <div class="testimonial-quote">"</div>
-      <p class="testimonial-text">Testimonial coming soon. Reach out to Jeffrey to learn more about the impact of his coaching programs.</p>
-      <div class="testimonial-author">Athletic Director — Coming Soon</div>
-    </div>
-    <div class="testimonial-card testimonial-placeholder">
-      <div class="testimonial-quote">"</div>
-      <p class="testimonial-text">Testimonial coming soon. Reach out to Jeffrey to learn more about the impact of his coaching programs.</p>
-      <div class="testimonial-author">High School Coach — Coming Soon</div>
-    </div>
-    <div class="testimonial-card testimonial-placeholder">
-      <div class="testimonial-quote">"</div>
-      <p class="testimonial-text">Testimonial coming soon. Reach out to Jeffrey to learn more about the impact of his coaching programs.</p>
-      <div class="testimonial-author">Athletic Director — Coming Soon</div>
-    </div>
-  </div>
+  <figure class="featured-testimonial">
+    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+    <div class="featured-headline">"The ultimate support system for a first-year athletic director."</div>
+    <blockquote>
+      <p>Partnering with Jeff from Roth Performance Coaching was the best decision I made last year as a first-year athletic director. The Athletic Director Academy gives you the tools and confidence to take on a job that is constantly changing and evolving. From day one, Jeff's core focus has been entirely dedicated to elevating my leadership and setting me up for long-term success.</p>
+      <p>Navigating the first year of being an athletic director is very overwhelming, but having Jeff in my corner provided incredible, hands-on support. He didn't just offer advice, he actively shared his wealth of knowledge, experience and resources with me. He always validated how I was feeling, challenged me to think bigger picture and provided a caring environment rooted in trust, personal growth and confidentiality. Jeff truly is there for your experience and what you need to be successful. Our weekly meetings and recaps gave me the tools to navigate my first year and also held me accountable to follow through with the vision I had for my programs.</p>
+      <p>If you are starting your journey as an AD and want someone genuinely invested in sharpening your leadership and helping you thrive through year one and beyond, Jeff from Roth Performance Coaching is your guy! Highly recommend!</p>
+    </blockquote>
+    <figcaption>Lauren · First-Year Athletic Director</figcaption>
+  </figure>
 </section>
-
--->
 
 <!-- CONTACT -->
 <section id="contact">
